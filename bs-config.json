@@ -1,5 +1,0 @@
-{
-  "port": 8000,
-  "files": ["./theme/**/*.html", "./theme/assets/**/*.{css,js}"],
-  "server": { "baseDir": "./theme/" }
-}
