@@ -1,0 +1,1283 @@
+
+
+/*------------------------------------------
+            Create Start Here
+-------------------------------------------*/
+
+.create-single-main{
+    margin: 128px 0;
+    overflow: hidden;
+    .container-fluid{
+        .single-main{
+            .wrapper{
+                margin: 0 0 72px 0;
+                .heading{
+                    color: $White-color;
+                }
+            }
+            .row-custom{
+                .col-single-otr{
+                    @include breakpoint($secreen-lg){
+                        width: 100%;
+                    }
+                    .col-single-inr{
+                        padding: 0 72px 0 0;
+                        @include breakpoint($secreen-max-xlg){
+                            padding: 0;
+                        }
+                        @include breakpoint($secreen-max-lg){
+                            padding: 0 0 72px 0;
+                        }
+                        .head{
+                            color: $White-color;
+                        }
+                        .head-2{
+                            color: $White-color;
+                            margin: 0 0 24px 0;
+                        }
+                        .form-main{
+                            .heading-input{
+                                color: $White-color;
+                            }
+                            .input-otr{
+                                margin: 24px 0;
+                                .input{
+                                    width: 100%;
+                                }
+                            }
+                            .input-otr{
+                                margin: 24px 0;
+                                .textarea{
+                                    width: 100%;
+                                    height: 52px;
+                                    padding: 12px 24px;
+                                    appearance: none;
+                                    resize: none;
+                                }
+                            }
+                            .select-main{
+                                margin: 24px 0 32px 0;
+                                .select {
+                                    cursor: pointer;
+                                    display: inline-block;
+                                    position: relative;
+                                    width: 100%;
+                                    &:not(:last-child){
+                                        margin-right: 24px;
+                                    }
+                                    .select-hidden {
+                                        display: none;
+                                        visibility: hidden;
+                                        padding-right: 10px;
+                                    }
+                                    .select-styled {
+                                        background-color: $White-Bg-1;
+                                        color: $White-color;
+                                        padding: 12px 40px 12px 24px;
+                                        border-radius: 8px;
+                                        border: none;
+                                        font-size: $font-size-S;
+                                        line-height: $line-height-S;
+                                        font-family: $font-family-Montserrat-Bold;
+                                        &:after {
+                                            content:"";
+                                            width: 16px;
+                                            height: 14px;
+                                            position: absolute;
+                                            background-image: url(/assets/img/arrow-drop-down.svg);
+                                            background-repeat: no-repeat;
+                                            background-position: center;
+                                            top: 18px;
+                                            right: 24px;
+                                        }
+                                        &:active, &.active {
+                                            &:after {
+                                                top: 18px;
+                                                border-color: transparent transparent $White-color transparent;
+                                            }
+                                        }
+                                    }
+                                    .select-options {
+                                        display: none; 
+                                        position: absolute;
+                                        top: 130%;
+                                        right: 0;
+                                        width: 100%;
+                                        z-index: 999;
+                                        background-color: $Primary-shade;
+                                        border-radius: 12px;
+                                        padding: 16px 0;
+                                        box-shadow: none;
+                                        li {
+                                            font-size: $font-size-S;
+                                            line-height: $line-height-S;
+                                            font-family: $font-family-Montserrat-Bold;
+                                            color: $White-color;
+                                            border-radius: 12px;
+                                            padding: 0 24px 0 24px;
+                                            transition: .3s;
+                                            &:not(:last-child){
+                                                margin: 0 0 8px 0;
+                                            }
+                                            &:hover {
+                                                color: $Primary-color;
+                                                background: transparent;
+                                                border-radius: 0;
+                                            }
+                                            &[rel="hide"] {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .sale-otr{
+                            background-color: $White-Bg-1;
+                            border-radius: 24px;
+                            padding: 24px 36px 28px 36px;
+                            margin: 0 0 32px 0;
+                            .sale-inr{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                @include breakpoint($secreen-xs){
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                }
+                                &:not(:last-child){
+                                    margin-bottom: 16px;
+                                }
+                                .content{
+                                    @include breakpoint($secreen-xs){
+                                        margin: 0 0 16px 0;
+                                    }
+                                    .heading-sale{
+                                        color: $White-color;
+                                        margin-bottom: 6px;
+                                    }
+                                    .desc-sale{
+                                        color: $Shade-1;
+                                    }
+                                }
+                                .togle-btn-otr{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    width: 60px;
+                                    height: 30px;
+                                    border-radius: 26px;
+                                    padding: 4px 6px;
+                                    background-color: $White-color;
+                                    cursor: pointer;
+                                    transition: .3s;
+                                    .togle-btn{
+                                        width: 21px;
+                                        height: 21px;
+                                        border-radius: 100%;
+                                        background-color: $Primary-color;
+                                        transition: .3s;
+                                    }
+                                }
+                                .togle-open{
+                                    justify-content: flex-end;
+                                    background-color: $Primary-color;
+                                    .togle-btn{
+                                        background-color: $White-color;
+                                    }
+                                }
+                            }
+                        }
+                        .heading-choose{
+                            color: $White-color;
+                        }
+                        .desc-choose{
+                            color: $Shade-1;
+                            margin: 6px 0 30px 0;
+                        }
+                        .row-custom-inr{
+                            .col-box-otr{
+                                @include breakpoint($secreen-max-md){
+                                    width: 50%;
+                                }
+                                @include breakpoint($secreen-xs){
+                                    width: 100%;
+                                }
+                                .col-box-inr{
+                                    background-color: $White-Bg-1;
+                                    padding: 28px 24px 24px 24px;
+                                    border-radius: 16px;
+                                    cursor: pointer;
+                                    transition: .3s;
+                                    border: 2px solid transparent;
+                                    &:hover{
+                                        background-color: $Primary-shade;
+                                    }
+                                    .img-otr-1{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        width: 60px;
+                                        height: 60px;
+                                        border-radius: 100%;
+                                        background-color: $White-Bg-1;
+                                        cursor: pointer;
+                                        border: 2px solid $White-color;
+                                        .icon{
+                                            font-size: 24px;
+                                            color: $White-color;
+                                        }
+                                    }
+                                    .img-otr{
+                                        margin: 0 0 12px 0;
+                                        .img-profile{
+                                            border: 2px solid $White-color;
+                                            width: 60px;
+                                            height: 60px;
+                                            border-radius: 100%;
+                                        }
+                                    }
+                                    .heading{
+                                        color: $White-color;
+                                        @include breakpoint($secreen-max-lg){
+                                            br{
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                                .boxx-1,.boxx-2{
+                                    @include breakpoint($secreen-max-md){
+                                        margin: 0 0 24px 0;
+                                    }
+                                }
+                                .boxx-1,.boxx-2,.boxx-3{
+                                    @include breakpoint($secreen-xs){
+                                        margin: 0 0 24px 0;
+                                    }
+                                }
+                                .active-border{
+                                    border: 2px solid $Primary-color;
+                                }
+                            }
+                            .col-btn-otr{
+                                .col-btn-inr{
+                                    display: flex;
+                                    align-items: center;
+                                    margin: 48px 0 0 0;
+                                    text-align: center;
+                                    @include breakpoint($secreen-xs){
+                                        flex-direction: column;
+                                    }
+                                    .btn-create{
+                                        width: 50%;
+                                        cursor: pointer;
+                                        @include breakpoint($secreen-xs){
+                                            width: 100%;
+                                        }
+                                        &:not(:last-child){
+                                            margin-right: 24px;
+                                            @include breakpoint($secreen-xs){
+                                                margin: 0 0 24px 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .col-art-otr{
+                    @include breakpoint($secreen-lg){
+                        width: 50%;
+                    }
+                    .wrapper-inr{
+                        margin: 0 0 28px 0;
+                        .heading{
+                            color: $White-color;
+                        }
+                    }
+                    .col-art-inr{
+                        background-color: $White-Bg-1;
+                        border-radius: 24px;
+                        padding: 28px 24px 32px 24px;
+                        .avatar-main{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin: 0 0 24px 0;
+                            .profile-inr{
+                                display: flex;
+                                .img-otr{
+                                    position: relative;
+                                    transition: .2s;
+                                    .img-inr{
+                                        .avatar-img{
+                                            height: 40px;
+                                            width: 40px;
+                                            border-radius: 100%;
+                                            border: 2px solid $White-color;
+                                        }
+                                    }
+                                    .check-icon-otr{
+                                        width: 16px;
+                                        height: 16px;
+                                        border-radius: 100px;
+                                        background-color: $Primary-color;
+                                        border: 1px solid $White-color;
+                                        position: absolute;
+                                        display: flex;
+                                        right: 0;
+                                        bottom: 0;
+                                        .check-icon{
+                                            position: relative;
+                                            top: 35%;
+                                            left: 50%;
+                                            transform: translate(-50%, -50%);
+                                            color: $White-color;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                                .img-1{
+                                    &:hover{
+                                        z-index: 1;
+                                        transform: translateY(-3px);
+                                        .hover{
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                    .hover{
+                                        position: absolute;
+                                        text-align: center;
+                                        width: 320px;
+                                        background-color: $Primary-shade;
+                                        border-radius: 8px 8px 8px 0;
+                                        left: 0;
+                                        top: -60px;
+                                        transition: .3s;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        .text{
+                                            color: $White-color;
+                                            padding: 6px 16px;
+                                        }
+                                        .box{
+                                            position: absolute;
+                                            width: 16px;
+                                            height: 16px;
+                                            background-color: $Primary-shade;
+                                            bottom: -12px;
+                                            left: 0;
+                                            border-radius: 0 0 20px 0;
+                                        }
+                                    }
+                                }
+                                .img-2{
+                                    margin-left: -20px;
+                                    &:hover{
+                                        z-index: 1;
+                                        transform: translateY(-3px);
+                                        .hover{
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                    .hover{
+                                        position: absolute;
+                                        text-align: center;
+                                        width: 320px;
+                                        background-color: $Primary-shade;
+                                        border-radius: 8px 8px 8px 0;
+                                        left: 0;
+                                        top: -60px;
+                                        transition: .3s;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        .text{
+                                            color: $White-color;
+                                            padding: 6px 16px;
+                                        }
+                                        .box{
+                                            position: absolute;
+                                            width: 16px;
+                                            height: 16px;
+                                            background-color: $Primary-shade;
+                                            bottom: -12px;
+                                            left: 0;
+                                            border-radius: 0 0 20px 0;
+                                        }
+                                    }
+                                }
+                                .img-3{
+                                    margin-left: -20px;
+                                    &:hover{
+                                        z-index: 1;
+                                        transform: translateY(-3px);
+                                        .hover{
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                    .hover{
+                                        position: absolute;
+                                        text-align: center;
+                                        width: 320px;
+                                        background-color: $Primary-shade;
+                                        border-radius: 8px 8px 8px 0;
+                                        left: 0;
+                                        top: -60px;
+                                        transition: .3s;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        .text{
+                                            color: $White-color;
+                                            padding: 6px 16px;
+                                        }
+                                        .box{
+                                            position: absolute;
+                                            width: 16px;
+                                            height: 16px;
+                                            background-color: $Primary-shade;
+                                            bottom: -12px;
+                                            left: 0;
+                                            border-radius: 0 0 20px 0;
+                                        }
+                                    }
+                                }
+                            }
+                            .list-icon-otr{
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+                                width: 20px;
+                                cursor: pointer;
+                                .icon{
+                                    
+                                }
+                            }
+                        }
+                        .cover-img-otr{
+                            position: relative;
+                            .cover-img{
+                                width: 100%;
+                                border-radius: 16px;
+                            }
+                            .time-otr{
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                background-color: $White-bg-2;
+                                z-index: 10;
+                                border-radius: 14px;
+                                width: 124px;
+                                height: 40px;
+                                backdrop-filter: blur(25px);
+                                .timer{
+                                    position: absolute;
+                                    left: 65%;
+                                    top: 50%;
+                                    transform: translate(-50%, -50%);
+                                    width: 100%;
+                                    color: $White-color;
+                                }
+                            }
+                            .heart-icon-otr2{
+                                position: absolute;
+                                width: 52px;
+                                height: 52px;
+                                border-radius: 100%;
+                                display: flex;
+                                background-color: $White-bg-2;
+                                cursor: pointer;
+                                top: 24px;
+                                right: 24px;
+                                backdrop-filter: blur(25px);
+                                .heart-icon2{
+                                    position: absolute;
+                                    left: 50%;
+                                    top: 50%;
+                                    transform: translate(-50%, -50%);
+                                    font-size: 24px;
+                                    color: $White-color;
+                                }
+                                .ri-heart-fill{
+                                    color: red;
+                                }
+                            }
+                        }
+                        .art-name{
+                            display: inline-flex;
+                            color: $White-color;
+                            margin: 18px 0;
+                            transition: .3s;
+                            &:hover{
+                                color: $Primary-color;
+                            }
+                        }
+                        .bid-main{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            background-color: $White-Bg-1;
+                            padding: 16px 20px;
+                            border-radius: 8px;
+                            .bid{
+                                color: $Shade-1;
+                            }
+                            .Price{
+                                color: $White-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .multiple-main{
+            .wrapper{
+                margin: 0 0 72px 0;
+                .heading{
+                    color: $White-color;
+                }
+            }
+            .row-custom{
+                .col-single-otr{
+                    @include breakpoint($secreen-lg){
+                        width: 100%;
+                    }
+                    .col-single-inr{
+                        padding: 0 72px 0 0;
+                        @include breakpoint($secreen-max-xlg){
+                            padding: 0;
+                        }
+                        @include breakpoint($secreen-max-lg){
+                            padding: 0 0 72px 0;
+                        }
+                        .head{
+                            color: $White-color;
+                        }
+                        .head-2{
+                            color: $White-color;
+                            margin: 0 0 24px 0;
+                        }
+                        .form-main{
+                            .heading-input{
+                                color: $White-color;
+                            }
+                            .input-otr{
+                                margin: 24px 0;
+                                .input{
+                                    width: 100%;
+                                }
+                            }
+                            .input-otr{
+                                margin: 24px 0;
+                                .textarea{
+                                    width: 100%;
+                                    height: 52px;
+                                    padding: 12px 24px;
+                                    appearance: none;
+                                    resize: none;
+                                }
+                            }
+                            .select-main{
+                                margin: 24px 0 32px 0;
+                                .select {
+                                    cursor: pointer;
+                                    display: inline-block;
+                                    position: relative;
+                                    width: 100%;
+                                    &:not(:last-child){
+                                        margin-right: 24px;
+                                    }
+                                    .select-hidden {
+                                        display: none;
+                                        visibility: hidden;
+                                        padding-right: 10px;
+                                    }
+                                    .select-styled {
+                                        background-color: $White-Bg-1;
+                                        color: $White-color;
+                                        padding: 12px 40px 12px 24px;
+                                        border-radius: 8px;
+                                        border: none;
+                                        font-size: $font-size-S;
+                                        line-height: $line-height-S;
+                                        font-family: $font-family-Montserrat-Bold;
+                                        &:after {
+                                            content:"";
+                                            width: 16px;
+                                            height: 14px;
+                                            position: absolute;
+                                            background-image: url(/assets/img/arrow-drop-down.svg);
+                                            background-repeat: no-repeat;
+                                            background-position: center;
+                                            top: 18px;
+                                            right: 24px;
+                                        }
+                                        &:active, &.active {
+                                            &:after {
+                                                top: 18px;
+                                                border-color: transparent transparent $White-color transparent;
+                                            }
+                                        }
+                                    }
+                                    .select-options {
+                                        display: none; 
+                                        position: absolute;
+                                        top: 130%;
+                                        right: 0;
+                                        width: 100%;
+                                        z-index: 999;
+                                        background-color: $Primary-shade;
+                                        border-radius: 12px;
+                                        padding: 16px 0;
+                                        box-shadow: none;
+                                        li {
+                                            font-size: $font-size-S;
+                                            line-height: $line-height-S;
+                                            font-family: $font-family-Montserrat-Bold;
+                                            color: $White-color;
+                                            border-radius: 12px;
+                                            padding: 0 24px 0 24px;
+                                            transition: .3s;
+                                            &:not(:last-child){
+                                                margin: 0 0 8px 0;
+                                            }
+                                            &:hover {
+                                                color: $Primary-color;
+                                                background: transparent;
+                                                border-radius: 0;
+                                            }
+                                            &[rel="hide"] {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .sale-otr{
+                            background-color: $White-Bg-1;
+                            border-radius: 24px;
+                            padding: 24px 36px 28px 36px;
+                            margin: 0 0 32px 0;
+                            .sale-inr{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                @include breakpoint($secreen-xs){
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                }
+                                &:not(:last-child){
+                                    margin-bottom: 16px;
+                                }
+                                .content{
+                                    @include breakpoint($secreen-xs){
+                                        margin: 0 0 16px 0;
+                                    }
+                                    .heading-sale{
+                                        color: $White-color;
+                                        margin-bottom: 6px;
+                                    }
+                                    .desc-sale{
+                                        color: $Shade-1;
+                                    }
+                                }
+                                .togle-btn-otr{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    width: 60px;
+                                    height: 30px;
+                                    border-radius: 26px;
+                                    padding: 4px 6px;
+                                    background-color: $White-color;
+                                    cursor: pointer;
+                                    transition: .3s;
+                                    .togle-btn{
+                                        width: 21px;
+                                        height: 21px;
+                                        border-radius: 100%;
+                                        background-color: $Primary-color;
+                                        transition: .3s;
+                                    }
+                                }
+                                .togle-open{
+                                    justify-content: flex-end;
+                                    background-color: $Primary-color;
+                                    .togle-btn{
+                                        background-color: $White-color;
+                                    }
+                                }
+                            }
+                        }
+                        .heading-choose{
+                            color: $White-color;
+                        }
+                        .desc-choose{
+                            color: $Shade-1;
+                            margin: 6px 0 30px 0;
+                        }
+                        .row-custom-inr{
+                            .col-box-otr{
+                                @include breakpoint($secreen-max-md){
+                                    width: 50%;
+                                }
+                                @include breakpoint($secreen-xs){
+                                    width: 100%;
+                                }
+                                .col-box-inr{
+                                    background-color: $White-Bg-1;
+                                    padding: 28px 24px 24px 24px;
+                                    border-radius: 16px;
+                                    cursor: pointer;
+                                    transition: .3s;
+                                    border: 2px solid transparent;
+                                    &:hover{
+                                        background-color: $Primary-shade;
+                                    }
+                                    .img-otr-1{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        width: 60px;
+                                        height: 60px;
+                                        border-radius: 100%;
+                                        background-color: $White-Bg-1;
+                                        cursor: pointer;
+                                        border: 2px solid $White-color;
+                                        .icon{
+                                            font-size: 24px;
+                                            color: $White-color;
+                                        }
+                                    }
+                                    .img-otr{
+                                        margin: 0 0 12px 0;
+                                        .img-profile{
+                                            border: 2px solid $White-color;
+                                            width: 60px;
+                                            height: 60px;
+                                            border-radius: 100%;
+                                        }
+                                    }
+                                    .heading{
+                                        color: $White-color;
+                                        @include breakpoint($secreen-max-lg){
+                                            br{
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                                .boxx-1,.boxx-2{
+                                    @include breakpoint($secreen-max-md){
+                                        margin: 0 0 24px 0;
+                                    }
+                                }
+                                .boxx-1,.boxx-2,.boxx-3{
+                                    @include breakpoint($secreen-xs){
+                                        margin: 0 0 24px 0;
+                                    }
+                                }
+                                .active-border{
+                                    border: 2px solid $Primary-color;
+                                }
+                            }
+                            .col-btn-otr{
+                                .col-btn-inr{
+                                    display: flex;
+                                    align-items: center;
+                                    margin: 48px 0 0 0;
+                                    text-align: center;
+                                    @include breakpoint($secreen-xs){
+                                        flex-direction: column;
+                                    }
+                                    .btn-create{
+                                        width: 50%;
+                                        cursor: pointer;
+                                        @include breakpoint($secreen-xs){
+                                            width: 100%;
+                                        }
+                                        &:not(:last-child){
+                                            margin-right: 24px;
+                                            @include breakpoint($secreen-xs){
+                                                margin: 0 0 24px 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .col-art-otr{
+                    @include breakpoint($secreen-lg){
+                        width: 50%;
+                    }
+                    .wrapper-inr{
+                        margin: 0 0 28px 0;
+                        .heading{
+                            color: $White-color;
+                        }
+                    }
+                    .col-art-inr{
+                        background-color: $White-Bg-1;
+                        border-radius: 24px;
+                        padding: 28px 24px 32px 24px;
+                        .avatar-main{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin: 0 0 24px 0;
+                            .profile-inr{
+                                display: flex;
+                                .img-otr{
+                                    position: relative;
+                                    transition: .2s;
+                                    .img-inr{
+                                        .avatar-img{
+                                            height: 40px;
+                                            width: 40px;
+                                            border-radius: 100%;
+                                            border: 2px solid $White-color;
+                                        }
+                                    }
+                                    .check-icon-otr{
+                                        width: 16px;
+                                        height: 16px;
+                                        border-radius: 100px;
+                                        background-color: $Primary-color;
+                                        border: 1px solid $White-color;
+                                        position: absolute;
+                                        display: flex;
+                                        right: 0;
+                                        bottom: 0;
+                                        .check-icon{
+                                            position: relative;
+                                            top: 35%;
+                                            left: 50%;
+                                            transform: translate(-50%, -50%);
+                                            color: $White-color;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                                .img-1{
+                                    &:hover{
+                                        z-index: 1;
+                                        transform: translateY(-3px);
+                                        .hover{
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                    .hover{
+                                        position: absolute;
+                                        text-align: center;
+                                        width: 320px;
+                                        background-color: $Primary-shade;
+                                        border-radius: 8px 8px 8px 0;
+                                        left: 0;
+                                        top: -60px;
+                                        transition: .3s;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        .text{
+                                            color: $White-color;
+                                            padding: 6px 16px;
+                                        }
+                                        .box{
+                                            position: absolute;
+                                            width: 16px;
+                                            height: 16px;
+                                            background-color: $Primary-shade;
+                                            bottom: -12px;
+                                            left: 0;
+                                            border-radius: 0 0 20px 0;
+                                        }
+                                    }
+                                }
+                                .img-2{
+                                    margin-left: -20px;
+                                    &:hover{
+                                        z-index: 1;
+                                        transform: translateY(-3px);
+                                        .hover{
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                    .hover{
+                                        position: absolute;
+                                        text-align: center;
+                                        width: 320px;
+                                        background-color: $Primary-shade;
+                                        border-radius: 8px 8px 8px 0;
+                                        left: 0;
+                                        top: -60px;
+                                        transition: .3s;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        .text{
+                                            color: $White-color;
+                                            padding: 6px 16px;
+                                        }
+                                        .box{
+                                            position: absolute;
+                                            width: 16px;
+                                            height: 16px;
+                                            background-color: $Primary-shade;
+                                            bottom: -12px;
+                                            left: 0;
+                                            border-radius: 0 0 20px 0;
+                                        }
+                                    }
+                                }
+                                .img-3{
+                                    margin-left: -20px;
+                                    &:hover{
+                                        z-index: 1;
+                                        transform: translateY(-3px);
+                                        .hover{
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                    .hover{
+                                        position: absolute;
+                                        text-align: center;
+                                        width: 320px;
+                                        background-color: $Primary-shade;
+                                        border-radius: 8px 8px 8px 0;
+                                        left: 0;
+                                        top: -60px;
+                                        transition: .3s;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        .text{
+                                            color: $White-color;
+                                            padding: 6px 16px;
+                                        }
+                                        .box{
+                                            position: absolute;
+                                            width: 16px;
+                                            height: 16px;
+                                            background-color: $Primary-shade;
+                                            bottom: -12px;
+                                            left: 0;
+                                            border-radius: 0 0 20px 0;
+                                        }
+                                    }
+                                }
+                            }
+                            .list-icon-otr{
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+                                width: 20px;
+                                cursor: pointer;
+                                .icon{
+                                    
+                                }
+                            }
+                        }
+                        .cover-img-otr{
+                            position: relative;
+                            .cover-img{
+                                width: 100%;
+                                border-radius: 16px;
+                            }
+                            .time-otr{
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                background-color: $White-bg-2;
+                                z-index: 10;
+                                border-radius: 14px;
+                                padding: 6px 16px;
+                                backdrop-filter: blur(25px);
+                                .timer{
+                                    color: $White-color;
+                                }
+                            }
+                            .heart-icon-otr2{
+                                position: absolute;
+                                width: 52px;
+                                height: 52px;
+                                border-radius: 100%;
+                                display: flex;
+                                background-color: $White-bg-2;
+                                cursor: pointer;
+                                top: 24px;
+                                right: 24px;
+                                backdrop-filter: blur(25px);
+                                .heart-icon2{
+                                    position: absolute;
+                                    left: 50%;
+                                    top: 50%;
+                                    transform: translate(-50%, -50%);
+                                    font-size: 24px;
+                                    color: $White-color;
+                                }
+                                .ri-heart-fill{
+                                    color: red;
+                                }
+                            }
+                        }
+                        .art-name{
+                            display: inline-flex;
+                            color: $White-color;
+                            margin: 18px 0;
+                            transition: .3s;
+                            &:hover{
+                                color: $Primary-color;
+                            }
+                        }
+                        .bid-main{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            background-color: $White-Bg-1;
+                            padding: 16px 20px;
+                            border-radius: 8px;
+                            .bid{
+                                color: $Shade-1;
+                            }
+                            .Price{
+                                color: $White-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+            Create End Here
+-------------------------------------------*/
+
+.upload-area {
+    width: 100%;
+    background-color: $White-Bg-1;
+    border-radius: 24px;
+    text-align: center;
+    padding: 90px 0 80px 0;
+    border: 2px dashed $Primary-color;
+    margin: 24px 0 36px 0;
+    @include breakpoint($secreen-xxs){
+        padding: 15px;
+    }
+    .upload-area--open {
+        animation: slidDown 500ms ease-in-out;
+    }
+    .upload-area__header {
+        .upload-area__paragraph{
+            .upload-area__tooltip {
+                position: relative;
+                cursor: pointer;
+                transition: color 300ms ease-in-out;
+                &:hover{
+                    color: var(--clr-blue);
+                    .upload-area__tooltip-data {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                .upload-area__tooltip-data {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -125%);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: none 300ms ease-in-out;
+                }
+            }
+        }
+    }
+    .upload-area__drop-zoon {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        .drop-zoon__icon {
+            display: none;
+            font-size: 3.75rem;
+            color: $Primary-color;
+        }
+        .desc{
+            color: $Shade-1;
+            margin: 0 0 24px 0 !important;
+            @include breakpoint($secreen-xxs){
+                margin: 12px 0 8px;
+            }
+        }
+        .drop-zoon__paragraph {
+            margin: 0;
+            transition: opacity 300ms ease-in-out;
+        }
+        .drop-zoon__loading-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            color: var(--clr-light-blue);
+            z-index: 10;
+        }
+        .drop-zoon__preview-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 232px;
+            object-fit: contain;
+            display: none;
+            z-index: 1000;
+        }
+        .drop-zoon__file-input {
+            display: none;
+        }
+    }
+    .upload-area__file-details {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        text-align: left;
+        .file-details__title {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: var(--clr-light-gray);
+        }
+        .uploaded-file {
+            display: flex;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: none 500ms ease-in-out;
+            transition-property: visibility, opacity;
+            .uploaded-file__icon-container {
+                position: relative;
+                .uploaded-file__icon {
+                    font-size: 3.4375rem;
+                    color: var(--clr-blue);
+                }
+                .uploaded-file__icon-text {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    font-size: 0.9375rem;
+                    font-weight: 500;
+                    color: var(--clr-white);
+                }
+            } 
+        }
+        .uploaded-file--open {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+@keyframes slidDown {
+    from {
+        height: 28.125rem;
+    }
+
+    to {
+        height: 35rem;
+    }
+}
+.drop-zoon__paragraph{
+    &:hover{
+        transform: translateY(0) !important;
+    }
+}
+.upload-active{
+    opacity: 0 !important;
+}
+.drop-zoon:hover .drop-zoon__icon,
+.drop-zoon:hover .drop-zoon__paragraph {
+    opacity: 0.7;
+}
+.drop-zoon:hover .drop-zoon__preview-image {
+    opacity: 1;
+} 
+.drop-zoon--over .drop-zoon__icon,
+.drop-zoon--over .drop-zoon__paragraph {
+    opacity: 0.7;
+}
+.drop-zoon--Uploaded {
+    
+}
+.drop-zoon--Uploaded .drop-zoon__icon,
+.drop-zoon--Uploaded .drop-zoon__paragraph {
+    opacity: 0;
+}
+.drop-zoon--Uploaded .drop-zoon__icon,
+.drop-zoon--Uploaded .desc {
+    opacity: 0;
+    margin: 52px 0 30px 0;
+}
+.file-details--open {
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+}
+.uploaded-file__info {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.uploaded-file__info::before,
+.uploaded-file__info::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    background-color: #ebf2ff;
+}
+.uploaded-file__info::before {
+    width: 100%;
+}
+.uploaded-file__info::after {
+    width: 100%;
+    background-color: var(--clr-blue);
+}
+.uploaded-file__info--active::after {
+    animation: progressMove 800ms ease-in-out;
+    animation-delay: 300ms;
+} 
+@keyframes progressMove {
+    from {
+        width: 0%;
+        background-color: transparent;
+    }
+
+    to {
+        width: 100%;
+        background-color: var(--clr-blue);
+    }
+}
+.uploaded-file__name {
+    width: 100%;
+    display: inline-block;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.uploaded-file__counter {
+    font-size: 1rem;
+    color: var(--clr-light-gray);
+}
+
+.upload-area .upload-area__drop-zoon .drop-zoon__preview-image{
+    height: 100%;
+}

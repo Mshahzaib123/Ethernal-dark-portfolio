@@ -1,0 +1,182 @@
+
+
+/*------------------------------------------
+          Sign Up Start Here
+-------------------------------------------*/
+
+.signup-main{
+    margin: 128px 0;
+    .container-fluid{
+        .row-signup{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .col-signup-otr{
+                padding: 0 150px;
+                @include breakpoint($secreen-max-xxlg){
+                    padding: 0 48px;
+                }
+                @include breakpoint($secreen-max-md){
+                    padding: 0 15px;
+                }
+                .wrapper{
+                    text-align: center;
+                    margin: 0 0 72px 0;
+                    .heading{
+                        color: $White-color;
+                    }
+                    .desc{
+                        color: $Shade-1;
+                        margin: 16px 0 0 0;
+                    }
+                }
+                .col-signup-inr{
+                    background-color: $White-Bg-1;
+                    border-radius: 24px;
+                    padding: 48px 64px 48px 64px;
+                    @include breakpoint($secreen-xs){
+                        padding: 24px;
+                    }
+                    .content{
+                        text-align: center;
+                        .text{
+                            color: $White-color;
+                        }
+                        .btn-main{
+                            display: flex;
+                            align-items: center;
+                            margin: 32px 0;
+                            @include breakpoint($secreen-xs){
+                                flex-direction: column;
+                            }
+                            .btn{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background-color: $White-Bg-1;
+                                padding: 9px; 
+                                border-radius: 16px;
+                                width: 100%;
+                                &:focus{
+                                    box-shadow: none;
+                                }
+                                .icon{
+                                    margin: 0 12px 0 0;
+                                    color: $Primary-color;
+                                    font-size: 24px;
+                                }
+                                .text{
+                                    color: $White-color;
+                                    font-family: $font-family-Poppins-Medium;
+                                }
+                                &:not(:last-child){
+                                    margin-right: 24px;
+                                    @include breakpoint($secreen-xs){
+                                        margin: 0 0 30px 0;
+                                    }
+                                }
+                            }
+                        }
+                        .form-main{
+                            .input-otr{
+                                &:not(:last-child){
+                                    margin:30px 0;
+                                }
+                                &:first-child{
+                                    margin-top: 32px;
+                                }
+                                .input{
+                                    width: 100%;
+                                }
+                            }
+                            .check-main{
+                                margin: 30px 0;
+                                .check{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    @include breakpoint($secreen-xxs){
+                                        margin: 0 0 16px 0;
+                                    }
+                                    label{
+                                        display: flex;
+                                        align-items: center;
+                                        margin: 0;
+                                        .check-inner{
+                                            width: 24px;
+                                            height: 24px;
+                                            border-radius: 50%;
+                                            flex-shrink: 0;
+                                            margin-right: 12px;
+                                            background-color: $White-color;
+                                            position: relative;
+                                            &:hover{
+                                                cursor: pointer;
+                                            }
+                                            .input-check{
+                                                opacity: 0;
+                                                position: absolute;
+                                                &:hover{
+                                                    cursor: pointer;
+                                                }
+                                            }
+                                            .input-check:checked + .fill-current {
+                                                display: block;
+                                                width: 24px;
+                                                height: 24px;
+                                                position: absolute;
+                                                left: 50%;
+                                                top: 50%;
+                                                transform: translate(-50%, -50%);
+                                                border-radius: 50%;
+                                            }
+                                            .fill-current{
+                                                display: none;
+                                                width: 24px;
+                                                height: 24px;
+                                                pointer-events: none;
+                                                position: relative;
+                                                left: -1px;
+                                                top: -1px;
+                                            }
+                                        }
+                                        .select-none{
+                                            color: $White-color;
+                                            line-height: 28px;
+                                            .linkk{
+                                                display: inline;
+                                                color: $Primary-color;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .action{
+                                display: flex;
+                                align-items: center;
+                                text-align: center;
+                                .button{
+                                    padding: 13px 24px 13px 24px;
+                                    border-radius: 12px;
+                                    width: 100%;
+                                    background-color: $Primary-color;
+                                    color: $White-color;
+                                    border: 1px solid transparent;
+                                    transition: .2s;
+                                    &:hover{
+                                        background-color: $White-Bg-1;
+                                        border: 1px solid $Primary-color;
+                                        color: $White-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }  
+        }
+    }
+}
+
+/*------------------------------------------
+          Sign Up End Here
+-------------------------------------------*/

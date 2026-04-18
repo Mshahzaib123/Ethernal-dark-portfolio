@@ -1,0 +1,296 @@
+
+
+/*------------------------------------------
+            Contact Start Here
+-------------------------------------------*/
+
+.contact-main{
+    margin: 128px 0;
+    .container-fluid{
+        .row-contact{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .col-form-otr{
+                .col-form-inr{
+                    .heading{
+                        color: $White-color;
+                    }
+                    .desc{
+                        color: $Shade-1;
+                        margin: 16px 0 36px 0;
+                    }
+                    .form-main{
+                        margin: 0;
+                        .input-main{
+                            display: flex;
+                            align-items: center;
+                            @include breakpoint($secreen-xs){
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+                            .input-otr{
+                                width: 50%;
+                                @include breakpoint($secreen-xs){
+                                    width: 100%;
+                                }
+                                &:not(:last-child){
+                                    margin-right: 24px;
+                                    @include breakpoint($secreen-xs){
+                                        margin: 0 0 30px 0;
+                                    }
+                                }
+                                .input{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .input-otr{
+                            .textarea{
+                                height: 120px;
+                                padding: 12px 24px;
+                                width: 100%;
+                                appearance: none;
+                                resize: none;
+                            }
+                        }
+                        .slect-main{
+                            display: flex;
+                            align-items: center;
+                            margin: 30px 0;
+                            .select {
+                                cursor: pointer;
+                                display: inline-block;
+                                position: relative;
+                                width: 100%;
+                                &:not(:last-child){
+                                    margin-right: 24px;
+                                }
+                                .select-hidden {
+                                    display: none;
+                                    visibility: hidden;
+                                    padding-right: 10px;
+                                }
+                                .select-styled {
+                                    background-color: $White-Bg-1;
+                                    color: $White-color;
+                                    padding: 12px 40px 12px 24px;
+                                    border-radius: 8px;
+                                    border: none;
+                                    font-size: $font-size-S;
+                                    line-height: $line-height-S;
+                                    font-family: $font-family-Montserrat-Bold;
+                                    &:after {
+                                        content:"";
+                                        width: 16px;
+                                        height: 14px;
+                                        position: absolute;
+                                        background-image: url(/assets/img/arrow-drop-down.svg);
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        top: 18px;
+                                        right: 24px;
+                                    }
+                                    &:active, &.active {
+                                        &:after {
+                                            top: 18px;
+                                            border-color: transparent transparent $White-color transparent;
+                                        }
+                                    }
+                                }
+                                .select-options {
+                                    display: none; 
+                                    position: absolute;
+                                    top: 130%;
+                                    right: 0;
+                                    width: 100%;
+                                    z-index: 999;
+                                    background-color: $Primary-shade;
+                                    border-radius: 12px;
+                                    padding: 16px 0;
+                                    box-shadow: none;
+                                    li {
+                                        font-size: $font-size-S;
+                                        line-height: $line-height-S;
+                                        font-family: $font-family-Montserrat-Bold;
+                                        color: $White-color;
+                                        border-radius: 12px;
+                                        padding: 0 24px 0 24px;
+                                        transition: .3s;
+                                        &:not(:last-child){
+                                            margin: 0 0 8px 0;
+                                        }
+                                        &:hover {
+                                            color: $Primary-color;
+                                            background: transparent;
+                                            border-radius: 0;
+                                        }
+                                        &[rel="hide"] {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .action-otr{
+                            width: 50%;
+                            margin: 30px 0 0 0;
+                            @include breakpoint($secreen-xs){
+                                width: 100%;
+                            }
+                            .button{
+                                padding: 13px 24px 13px 24px;
+                                border-radius: 12px;
+                                background-color: $Primary-color;
+                                color: $White-color;
+                                border: 1px solid transparent;
+                                transition: .2s;
+                                width: 100%;
+                                &:hover{
+                                    background-color: $White-Bg-1;
+                                    border: 1px solid $Primary-color;
+                                    color: $White-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .col-contact-otr{
+                .col-contact-inr{
+                    background-color: $White-Bg-1;
+                    border-radius: 24px;
+                    padding: 32px 40px 40px 40px;
+                    @include breakpoint($secreen-max-md){
+                        margin: 72px 0 0 0;
+                    }
+                    @include breakpoint($secreen-xxs){
+                        padding: 24px;
+                    }
+                    .heading{
+                        color: $White-color;
+                    }
+                    .contact-icon-otr{
+                        margin: 36px 0 40px 0;
+                        .email-main{
+                            display: flex;
+                            align-items: center;
+                            margin: 0 0 24px 0;
+                            @include breakpoint($secreen-lg){
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+                            @include breakpoint($secreen-xxs){
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+                            .email-otr{
+                                &:not(:last-child){
+                                    margin-right: 40px;
+                                    @include breakpoint($secreen-lg){
+                                        margin: 0 0 24px 0;
+                                    }
+                                    @include breakpoint($secreen-xxs){
+                                        margin: 0 0 24px 0;
+                                    }
+                                }
+                                .icon-otr{
+                                    display: flex;
+                                    align-items: center;
+                                    margin: 0 0 8px 0;
+                                    .icon-inr{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        width: 52px;
+                                        height: 52px;
+                                        border-radius: 100%;
+                                        background-color: $White-Bg-1;
+                                        margin: 0 16px 0 0;
+                                        .icon{
+                                            font-size: 24px;
+                                            color: $Primary-color;
+                                        }
+                                    }
+                                    .email-text{
+                                        color: $White-color;
+                                    }
+                                }
+                            }
+                            .linkk{
+                                color: $Shade-1;
+                            }
+                        }
+                        .email-otr{
+                            &:not(:last-child){
+                                margin-right: 40px;
+                            }
+                            .icon-otr{
+                                display: flex;
+                                align-items: center;
+                                margin: 0 0 8px 0;
+                                .icon-inr{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 52px;
+                                    height: 52px;
+                                    border-radius: 100%;
+                                    background-color: $White-Bg-1;
+                                    margin: 0 16px 0 0;
+                                    .icon{
+                                        font-size: 24px;
+                                        color: $Primary-color;
+                                    }
+                                }
+                                .email-text{
+                                    color: $White-color;
+                                }
+                            }
+                            .linkk{
+                                color: $Shade-1;
+                            }
+                        }
+                    }
+                    .social-icon{
+                        .heading{
+                            color: $White-color;
+                            margin: 0 0 8px 0;
+                        }
+                        .icon-ul{
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            .icon-li{
+                                margin-top: 16;
+                                &:not(:last-child){
+                                    margin-right: 16px;
+                                }
+                                .icon-a{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 52px;
+                                    height: 52px;
+                                    border-radius: 100%;
+                                    background-color: $White-Bg-1;
+                                    transition: .3s;
+                                    &:hover{
+                                        background-color: $Primary-color;
+                                    }
+                                    .icon{
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+            Contact End Here
+-------------------------------------------*/

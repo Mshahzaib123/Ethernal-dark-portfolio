@@ -1,0 +1,57 @@
+
+
+/*------------------------------------------
+            404 Start Here
+-------------------------------------------*/
+
+.error-main{
+    margin: 128px 0;
+    .container-fluid{
+        .row-custom{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .col-otr{
+                .col-inr{
+                    padding: 0 72px;
+                    @include breakpoint($secreen-max-sm){
+                        padding: 0;
+                    }
+                    .img-otr{
+                        .img{
+                            width: 100%;
+                        }
+                    }
+                    .content{
+                        text-align: center;
+                        margin: 72px 0 0 0;
+                        .heading{
+                            color: $White-color;
+                        }
+                        .desc{
+                            color: $Shade-1;
+                            margin: 16px 0 32px 0;
+                            @include breakpoint($secreen-max-xxlg){
+                                br{
+                                    display: none;
+                                }
+                            }
+                        }
+                        .action{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            .btn-linkk{
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+            404 End Here
+-------------------------------------------*/

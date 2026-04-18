@@ -1,0 +1,618 @@
+
+
+/*------------------------------------------
+        Single Artwork Start Here
+-------------------------------------------*/
+
+.single-artwork-main{
+    margin: 128px 0;
+    .container-fluid{
+        .row-custom{
+            .col-content-otr{
+                .col-content-inr{
+                    position: sticky;
+                    top: 0;
+                    @include breakpoint($secreen-max-md){
+                        margin: 0 0 40px 0;
+                    }
+                    .heading{
+                        color: $White-color;
+                    }
+                    .desc{
+                        color: $Shade-1;
+                        margin: 16px 0 36px 0;
+                    }
+                    .col-otr{
+                        display: flex;
+                        align-items: center;
+                        @include breakpoint($secreen-lg){
+                            flex-direction: column;
+                            align-items: flex-start;
+                        }
+                        @include breakpoint($secreen-xs){
+                            flex-direction: column;
+                            align-items: flex-start;
+                        }
+                        .col-inr{
+                            width: 50%;
+                            @include breakpoint($secreen-lg){
+                                width: 100%;
+                            }
+                            @include breakpoint($secreen-xs){
+                                width: 100%;
+                            }
+                            &:not(:last-child){
+                                margin: 0 24px 0 0;
+                                @include breakpoint($secreen-lg){
+                                    margin: 0 0 24px 0;
+                                }
+                                @include breakpoint($secreen-xs){
+                                    margin: 0 0 24px 0;
+                                }
+                            }
+                            .col-box{
+                                display: flex;
+                                align-items: center;
+                                background-color: $White-Bg-1;
+                                border-radius: 16px;
+                                padding: 24px 28px;
+                                .avtar-otr{
+                                    width: 62px;
+                                    height: 62px;
+                                    .avatar{
+                                        height: 100%;
+                                        border-radius: 100%;
+                                        border: 2px solid $White-color;
+                                    }
+                                }
+                                .content-otr{
+                                    margin: 0 0 0 16px;
+                                    .creator-name{
+                                        color: $White-color;
+                                    }
+                                    .price{
+                                        color: $Primary-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .bid-main{
+                        background-color: $White-Bg-1;
+                        border-radius: 24px;
+                        padding: 24px 28px 32px 28px;
+                        margin: 40px 0 0 0;
+                        @include breakpoint($secreen-xs){
+                            background-color: transparent;
+                            padding: 0;
+                            border-radius: 0;
+                        }
+                        .heading{
+                            color: $White-color;
+                        }
+                        .bid-otr{
+                            display: flex;
+                            align-items: center;
+                            margin: 24px 0 36px 0;
+                            @include breakpoint($secreen-lg){
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+                            @include breakpoint($secreen-xs){
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+                            .bid-inr{
+                                background-color: $White-Bg-1;
+                                border-radius: 16px;
+                                padding: 16px 24px;
+                                @include breakpoint($secreen-lg){
+                                    width: 100%;
+                                }
+                                @include breakpoint($secreen-xs){
+                                    width: 100%;
+                                }
+                                &:not(:last-child){
+                                    margin: 0 24px 0 0;
+                                    @include breakpoint($secreen-lg){
+                                        margin: 0 0 24px 0;
+                                    }
+                                    @include breakpoint($secreen-xs){
+                                        margin: 0 0 24px 0;
+                                    }
+                                }
+                                .text{
+                                    color: $Shade-1;
+                                }
+                                .price{
+                                    color: $White-color;
+                                    margin: 6px 0;
+                                }
+                            }
+                            .bid-inr2{
+                                .timer{
+                                    display: flex;
+                                    align-items: center;
+                                    margin: 6px 0 0 0;
+                                    .main{
+                                        &:not(:last-child){
+                                            margin: 0 24px 0 0;
+                                        }
+                                        .time-inr{
+                                            color: $White-color;
+                                            margin: 0 0 6px 0;
+                                        }
+                                        .time-text{
+                                            color: $Shade-1;
+                                            @include breakpoint($secreen-xxs){
+                                                font-size: $font-size-S;
+                                                line-height: $line-height-S;
+                                                font-family: $font-family-Poppins-Regular;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .action{
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            .col-art-otr{
+                .col-art-inr{
+                    padding: 0 0 0 100px;
+                    @include breakpoint($secreen-max-xlg){
+                        padding: 0;
+                    }
+                    .art-img-otr{
+                        position: relative;
+                        background-color: $White-Bg-1;
+                        border-radius: 24px;
+                        padding: 36px;
+                        margin: 0 0 40px 0;
+                        @include breakpoint($secreen-xs){
+                            padding: 24px;
+                        }
+                        .img-inr{
+                            .cover-img{
+                                border-radius: 16px;
+                                width: 100%;
+                            }
+                        }
+                        .icon-otr{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin: 32px 0 0 0;
+                            .heart-main{
+                                display: flex;
+                                align-items: center;
+                                .heart-icon-otr{
+                                    width: 52px;
+                                    height: 52px;
+                                    border-radius: 100%;
+                                    display: flex;
+                                    background-color: $White-Bg-1;
+                                    position: relative;
+                                    cursor: pointer;
+                                    .heart-icon{
+                                        position: absolute;
+                                        left: 50%;
+                                        top: 50%;
+                                        transform: translate(-50%, -50%);
+                                        font-size: 24px;
+                                        color: $Primary-color;
+                                    }
+                                    .ri-heart-fill{
+                                        color: red;
+                                    }
+                                }
+                                .likes{
+                                    color: $Shade-1;
+                                    margin-left: 16px;
+                                    @include breakpoint($secreen-xs){
+                                        display: none;
+                                    }
+                                }
+                            }
+                            .icon-inr{
+                                display: flex;
+                                align-items: center;
+                                .icon-share-otr{
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    cursor: pointer;
+                                    width: 52px;
+                                    height: 52px;
+                                    border-radius: 100%;
+                                    background-color: $White-Bg-1;
+                                    margin: 0 16px 0 0;
+                                    @include breakpoint($secreen-xs){
+                                        position: inherit;
+                                    }
+                                    .share-icon{
+                                        font-size: 24px;
+                                        color: $Primary-color;
+                                    }
+                                    .share-pop{
+                                        position: absolute;
+                                        background-color: $Primary-shade;
+                                        border-radius: 16px;
+                                        width: 380px;
+                                        padding: 24px 28px 24px 28px;
+                                        right: 0;
+                                        z-index: 10;
+                                        bottom: 0px;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: .3s;
+                                        @include breakpoint($secreen-xs){
+                                            width: 100%;
+                                        }
+                                        .heading{
+                                            color: $White-color;
+                                        }
+                                        .icon-ul{
+                                            display: flex;
+                                            align-items: center;
+                                            flex-wrap: wrap;
+                                            .icon-li{
+                                                margin-top: 16;
+                                                &:not(:last-child){
+                                                    margin-right: 16px;
+                                                }
+                                                .icon-a{
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    width: 52px;
+                                                    height: 52px;
+                                                    border-radius: 100%;
+                                                    background-color: $White-Bg-1;
+                                                    transition: .3s;
+                                                    &:hover{
+                                                        background-color: $Primary-color;
+                                                    }
+                                                    .icon{
+                
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .share-pop-open{
+                                        opacity: 1;
+                                        visibility: visible;
+                                        bottom: 90px;
+                                    }
+                                }
+                                .icon-flag-otr{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    cursor: pointer;
+                                    width: 52px;
+                                    height: 52px;
+                                    border-radius: 100%;
+                                    background-color: $White-Bg-1;
+                                    .flag-icon{
+                                        font-size: 24px;
+                                        color: $Primary-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .activity-otr{
+                        background-color: $White-Bg-1;
+                        border-radius: 24px;
+                        padding: 40px 36px 36px 36px;
+                        @include breakpoint($secreen-xs){
+                            padding: 0;
+                            background-color: transparent;
+                            border-radius: 0;
+                        }
+                        .activity{
+                            display: grid;
+                            grid-template-columns: auto 1fr;
+                            align-items: center;
+                            background-color: $White-Bg-1;
+                            border-radius: 16px;
+                            padding: 16px 20px;
+                            @include breakpoint($secreen-xs){
+                                display: flex;
+                                align-items: flex-start;
+                                flex-direction: column;
+                            }
+                            @include breakpoint($secreen-xs){
+                                padding: 28px;
+                            }
+                            &:not(:last-child){
+                                margin: 0 0 24px 0;
+                            }
+                            .img-otr{
+                                width: 80px;
+                                height: 80px;
+                                margin: 0 24px 0 0;
+                                @include breakpoint($secreen-xs){
+                                    margin: 0 0 24px 0;
+                                    width: 100%;
+                                    height: auto;
+                                }
+                                .img-art{
+                                    border-radius: 8px;
+                                    height: 100%;
+                                    @include breakpoint($secreen-xs){
+                                        width: 100%;
+                                        height: auto;
+                                        border-radius: 16px;
+                                    }
+                                }
+                            }
+                            .text-otr{
+                                .desc{
+                                    color: $Shade-1;
+                                    margin: 0 0 8px 0;
+                                    .primary{
+                                        display: inline;
+                                        color: $Primary-color;
+                                    }
+                                }
+                                .time{
+                                    color: $Shade-1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .feature-main{
+            margin: 72px 0 0 0;
+            .wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0 0 72px 0;
+                .heading{
+                    color: $White-color;
+                }
+                .view-all{
+                    display: flex;
+                    align-items: center;
+                    @include breakpoint($secreen-xs){
+                        display: none;
+                    }
+                    .view{
+                        color: $Primary-color;
+                        margin: 0 12px 0 0;
+                    }
+                    .arrow-right{
+                        color: $Primary-color;
+                        font-size: 24px;
+                    }
+                }
+            }
+            .row-custom{
+                .col-otr{
+                    @include breakpoint($secreen-max-xlg){
+                        width: 33.333%;
+                    }
+                    @include breakpoint($secreen-max-md){
+                        width: 50%;
+                    }
+                    @include breakpoint($secreen-custom){
+                        width: 100%;
+                    }
+                    .col-inr{
+                        background-color: $White-Bg-1;
+                        border-radius: 24px;
+                        padding: 28px 24px 32px 24px;
+                        .avatar-main{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin: 0 0 24px 0;
+                            .profile-inr{
+                                display: flex;
+                                .img-otr{
+                                    position: relative;
+                                    transition: .2s;
+                                    .img-inr{
+                                        .avatar-img{
+                                            height: 40px;
+                                            width: 40px;
+                                            border-radius: 100%;
+                                            border: 2px solid $White-color;
+                                        }
+                                    }
+                                    .check-icon-otr{
+                                        width: 16px;
+                                        height: 16px;
+                                        border-radius: 100px;
+                                        background-color: $Primary-color;
+                                        border: 1px solid $White-color;
+                                        position: absolute;
+                                        display: flex;
+                                        right: 0;
+                                        bottom: 0;
+                                        .check-icon{
+                                            position: relative;
+                                            top: 35%;
+                                            left: 50%;
+                                            transform: translate(-50%, -50%);
+                                            color: $White-color;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                                .img-1,.img-2,.img-3{
+                                    &:hover{
+                                        z-index: 1;
+                                        transform: translateY(-3px);
+                                        .hover{
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                    .hover{
+                                        position: absolute;
+                                        text-align: center;
+                                        width: 260px;
+                                        background-color: $Primary-shade;
+                                        border: 1px solid $Primary-color;
+                                        border-radius: 8px;
+                                        left: 0;
+                                        top: -60px;
+                                        transition: .3s;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        @include breakpoint($secreen-max-md){
+                                            display: none;
+                                        }
+                                        .text{
+                                            color: $White-color;
+                                            padding: 6px 16px;
+                                        }
+                                    }
+                                }
+                                .img-2{
+                                    margin-left: -20px;
+                                }
+                                .img-3{
+                                    margin-left: -20px;
+                                }
+                            }
+                            .list-icon-otr{
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+                                cursor: pointer;
+                                width: 20px;
+                                .icon{
+                                    width: auto;
+                                }
+                            }
+                        }
+                        .cover-img-otr{
+                            position: relative;
+                            .cover-img{
+                                width: 100%;
+                                border-radius: 16px;
+                            }
+                            .time-otr{
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                background-color: $White-bg-2;
+                                z-index: 10;
+                                border-radius: 14px;
+                                width: 124px;
+                                height: 40px;
+                                backdrop-filter: blur(25px);
+                                .timer{
+                                    position: absolute;
+                                    left: 65%;
+                                    top: 50%;
+                                    transform: translate(-50%, -50%);
+                                    width: 100%;
+                                    color: $White-color;
+                                }
+                            }
+                            .heart-icon-otr2{
+                                position: absolute;
+                                width: 52px;
+                                height: 52px;
+                                border-radius: 100%;
+                                display: flex;
+                                background-color: $White-bg-2;
+                                cursor: pointer;
+                                top: 24px;
+                                right: 24px;
+                                backdrop-filter: blur(25px);
+                                .heart-icon2{
+                                    position: absolute;
+                                    left: 50%;
+                                    top: 50%;
+                                    transform: translate(-50%, -50%);
+                                    font-size: 24px;
+                                    color: $White-color;
+                                }
+                                .ri-heart-fill{
+                                    color: red;
+                                }
+                            }
+                        }
+                        .art-name{
+                            display: inline-flex;
+                            color: $White-color;
+                            margin: 18px 0;
+                            transition: .3s;
+                            &:hover{
+                                color: $Primary-color;
+                            }
+                        }
+                        .bid-main{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            background-color: $White-Bg-1;
+                            padding: 16px 20px;
+                            border-radius: 8px;
+                            .bid{
+                                color: $Shade-1;
+                            }
+                            .Price{
+                                color: $White-color;
+                            }
+                        }
+                    }
+                    .box-1,.box-2,.box-3{
+                        @include breakpoint($secreen-max-xlg){
+                            margin: 0 0 24px 0;
+                        }
+                    }
+                    .box-1,.box-2{
+                        @include breakpoint($secreen-max-md){
+                            margin: 0 0 24px 0;
+                        }
+                    }
+                    .box-1,.box-2,.box-3{
+                        @include breakpoint($secreen-custom){
+                            margin: 0 0 24px 0;
+                        }
+                    }
+                }
+            }
+            .responsive{
+                display: none;
+                align-items: center;
+                justify-content: center;
+                margin: 48px 0 0 0;
+                @include breakpoint($secreen-xs){
+                    display: flex;
+                }
+                .view-all{
+                    display: flex;
+                    align-items: center;
+                    .view{
+                        color: $Primary-color;
+                        margin: 0 12px 0 0;
+                    }
+                    .arrow-right{
+                        color: $Primary-color;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Single Artwork End Here
+-------------------------------------------*/

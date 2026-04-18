@@ -1,0 +1,129 @@
+
+
+/*------------------------------------------
+            Activity Start Here
+-------------------------------------------*/
+
+.activity-main{
+    margin: 128px 0;
+    .container-fluid{
+        .wrapper{
+            margin: 0 0 72px 0;
+            .heading{
+                color: $White-color;
+            }
+        }
+        .row-custom{
+            @include breakpoint($secreen-max-md){
+                flex-direction: column-reverse;
+            }
+            .col-activity-otr{
+                .col-activity-inr{
+                    .activity{
+                        display: flex;
+                        align-items: center;
+                        background-color: $White-Bg-1;
+                        border-radius: 16px;
+                        padding: 28px;
+                        @include breakpoint($secreen-xs){
+                            flex-direction: column;
+                            align-items: flex-start;
+                        }
+                        @include breakpoint($secreen-xxs){
+                            padding: 24px;
+                        }
+                        &:not(:last-child){
+                            margin: 0 0 24px 0;
+                        }
+                        .img-otr{
+                            width: 120px;
+                            height: 120px;
+                            margin: 0 24px 0 0;
+                            @include breakpoint($secreen-xs){
+                                margin: 0 0 24px 0;
+                                width: 100%;
+                                height: auto;
+                            }
+                            .img-art{
+                                border-radius: 8px;
+                                height: 100%;
+                                @include breakpoint($secreen-xs){
+                                    width: 100%;
+                                    height: auto;
+                                    border-radius: 16px;
+                                }
+                            }
+                        }
+                        .text-otr{
+                            .name{
+                                color: $White-color;
+                                display: inline-block;
+                            }
+                            .desc{
+                                color: $Shade-1;
+                                margin: 6px 0;
+                                .primary{
+                                    display: inline;
+                                    color: $Primary-color;
+                                }
+                            }
+                            .time{
+                                color: $Shade-1;
+                            }
+                        }
+                    }
+                    .btn-otr{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 48px 0 0 0;
+                    }
+                }
+            }
+            .col-filter-otr{
+                .col-filter-inr{
+                    padding: 0 0 0 48px;
+                    position: sticky;
+                    top: 0;
+                    @include breakpoint($secreen-max-md){
+                        padding: 0 0 72px 0;
+                    }
+                    .heading{
+                        color: $White-color;
+                    }
+                    .filter{
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        margin: 12px 0 32px;
+                        .filter-btn{
+                            margin-top: 24px;
+                            &:not(:last-child){
+                                margin-right: 24px;
+                            }
+                            .button{
+                                padding: 6px 16px;
+                                border-radius: 12px;
+                                background-color: $White-Bg-1;
+                                border: 1px solid $Primary-color;
+                                color: $White-color;
+                                transition: .2s;
+                            }
+                        }
+                        .filter-active{
+                            background-color: $Primary-color !important;
+                        }
+                    }
+                    .clear-filter{
+                        color: $Primary-color;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+            Activity End Here
+-------------------------------------------*/

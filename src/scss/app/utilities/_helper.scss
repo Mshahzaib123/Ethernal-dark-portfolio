@@ -1,0 +1,192 @@
+
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: $Dark-black;
+}
+
+ul,li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-fluid{
+    padding: 0 50px;
+    @include breakpoint($secreen-max-md){
+        padding: 0 15px;
+    }
+}
+
+.heading-h1{
+    font-size: $font-size-h1;
+    line-height: $line-height-h1;
+    font-family: $font-family-Montserrat-Bold;
+    @include breakpoint($secreen-xs){
+        font-size: $font-size-h2;
+        line-height: $line-height-h2;
+    }
+}
+.heading-h2{
+    font-size: $font-size-h2;
+    line-height: $line-height-h2;
+    font-family: $font-family-Montserrat-Bold;
+    @include breakpoint($secreen-xs){
+        font-size: $font-size-h3;
+        line-height: $line-height-h3;
+    }
+}
+.heading-h3{
+    font-size: $font-size-h3;
+    line-height: $line-height-h3;
+    font-family: $font-family-Montserrat-Bold;
+    @include breakpoint($secreen-xs){
+        font-size: $font-size-h4;
+        line-height: $line-height-h4;
+    }
+}
+.heading-h4{
+    font-size: $font-size-h4;
+    line-height: $line-height-h4;
+    font-family: $font-family-Montserrat-Bold;
+    @include breakpoint($secreen-xs){
+        font-size: $font-size-h5;
+        line-height: $line-height-h5;
+    }
+}
+.heading-h5{
+    font-size: $font-size-h5;
+    line-height: $line-height-h5;
+    font-family: $font-family-Montserrat-Bold;
+}
+.heading-L{
+    font-size: $font-size-L;
+    line-height: $line-height-L;
+    font-family: $font-family-Poppins-Medium;
+}
+.heading-LB-Mon{
+    font-size: $font-size-L;
+    line-height: $line-height-L;
+    font-family: $font-family-Montserrat-Bold;
+}
+.heading-LB{
+    font-size: $font-size-L;
+    line-height: $line-height-L;
+    font-family: $font-family-Poppins-Medium;
+}
+.heading-M{
+    font-size: $font-size-M;
+    line-height: $line-height-M;
+    font-family: $font-family-Poppins-Medium;
+}
+.heading-MB{
+    font-size: $font-size-M;
+    line-height: $line-height-M;
+    font-family: $font-family-Poppins-Medium;
+}
+.heading-MB-Mon{
+    font-size: $font-size-M;
+    line-height: $line-height-M;
+    font-family: $font-family-Montserrat-Bold;
+}
+.heading-S{
+    font-size: $font-size-S;
+    line-height: $line-height-S;
+    font-family: $font-family-Poppins-Regular;
+}
+.heading-SB{
+    font-size: $font-size-S;
+    line-height: $line-height-S;
+    font-family: $font-family-Poppins-Medium;
+}
+.heading-XSB{
+    font-size: $font-size-S;
+    line-height: $line-height-S;
+    font-family: $font-family-Poppins-Medium;
+}
+
+.btn-primary-1{
+    padding: 13px 24px 13px 24px;
+    border-radius: 12px;
+    background-color: $Primary-color;
+    color: $White-color;
+    text-transform: capitalize;
+    font-family: $font-family-Poppins-Medium;
+    border: 1px solid transparent;
+    transition: .2s;
+    &:hover{
+        background-color: $White-Bg-1;
+        border: 1px solid $Primary-color;
+        color: $White-color;
+    }
+}
+
+.btn-primary-2{
+    padding: 14px 24px 12px 24px;
+    border-radius: 12px;
+    background-color: $White-Bg-1;
+    text-transform: capitalize;
+    font-family: $font-family-Poppins-Medium;
+    border: 1px solid $Primary-color;
+    color: $White-color;
+    transition: .2s;
+    &:hover{
+        background-color: $Primary-color;
+        color: $White-color;
+        border: 1px solid transparent;
+    }
+}
+
+.input{
+    padding: 14px 48px 14px 24px;
+    background-color: $White-Bg-1;
+    border-radius: 12px;
+    font-family: $font-family-Poppins-Medium;
+    color: $White-color;
+    border: none;
+    &:focus{
+        outline: none;
+    }
+    &::placeholder{
+        color: $White-color;
+    }
+}
+
+.blur-effect{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(25px);
+}

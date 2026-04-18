@@ -1,0 +1,136 @@
+
+
+/*------------------------------------------
+        How it Work Start Here
+-------------------------------------------*/
+
+.how-it-work-main{
+    margin: 128px 0;
+    .container-fluid{
+        .wrapper{
+            margin: 0 0 72px 0;
+            .tab-otr{
+                display: flex;
+                align-items: center;
+                @include breakpoint($secreen-max-sm){
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                .heading{
+                    color: $White-color;
+                    margin: 0 24px 0 0;
+                    @include breakpoint($secreen-max-sm){
+                        margin: 0 0 24px 0;
+                    }
+                }
+                .tab-inr{
+                    position: relative;
+                    .btn-drop{
+                        display: flex;
+                        align-items: center;
+                        background-color: $White-Bg-1;
+                        border: 2px solid $Primary-color;
+                        border-radius: 12px;
+                        padding: 6px 16px;
+                        cursor: pointer;
+                        .btn-drop-inr{
+                            color: $White-color;
+                        }
+                        .arrow-down{
+                            font-size: 18px;
+                            color: $White-color;
+                            margin: 0 0 0 8px;
+                        }
+                        .change-text{
+                            color: $White-color;
+                        }
+                    }
+                    .tabs-ul{
+                        position: absolute;
+                        left: 0;
+                        top: 80px;
+                        width: 200px;
+                        border-radius: 24px;
+                        background-color: $Primary-shade;
+                        padding: 16px 24px 20px 24px;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: .3s;
+                        z-index: 10;
+                        .tab-link{
+                            cursor: pointer;
+                            &:not(:last-child){
+                                margin-bottom: 12px;
+                            }
+                            .tab-p{
+                                color: $White-color;
+                            }
+                        }
+                        .active{
+                            .tab-p{
+                                color: $Primary-color;
+                            }
+                        }
+                    }
+                    .tab-drop-open{
+                        opacity: 1;
+                        visibility: visible;
+                        top: 50px;
+                    }
+                }
+            }
+        }
+        .row-custom-main{
+            .tab-content{
+                display: none;
+                opacity: 0;
+                transform: translateY(15px);
+                animation: fadeIn 0.3s ease 1 forwards;
+                .row-custom-inr{
+                    .col-work-otr{
+                        .col-work-inr{
+                            background-color: $White-Bg-1;
+                            border-radius: 16px;
+                            padding: 28px 32px 24px 32px;
+                            .icon-otr{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 60px;
+                                height: 60px;
+                                border-radius: 100%;
+                                background-color: $White-Bg-1;
+                                .icon{
+                                    font-size: 32px;
+                                    color: $White-color;
+                                }
+                            }
+                            .content{
+                                .heading{
+                                    color: $White-color;
+                                    margin: 16px 0 12px 0;
+                                }
+                                .desc{
+                                    color: $Shade-1;
+                                }
+                            }
+                        }
+                        .box-1,.box-2{
+                            @include breakpoint($secreen-max-md){
+                                margin: 0 0 24px 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .active{
+                display: block;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        How it Work End Here
+-------------------------------------------*/

@@ -1,0 +1,199 @@
+
+
+/*------------------------------------------
+        Explore Creator Start Here
+-------------------------------------------*/
+
+.explore-creator-main{
+    margin: 128px 0;
+    .container-fluid{
+        .wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 0 72px 0;
+            @include breakpoint($secreen-xs){
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .heading{
+                color: $White-color;
+                @include breakpoint($secreen-xs){
+                    margin: 0 0 24px 0;
+                }
+            }
+            .slect-main{
+                @include breakpoint($secreen-xxs){
+                    width: 100%;
+                }
+                .select {
+                    cursor: pointer;
+                    display: inline-block;
+                    position: relative;
+                    @include breakpoint($secreen-xxs){
+                        width: 100%;
+                    }
+                    &:not(:last-child){
+                        margin-right: 24px;
+                    }
+                    .select-hidden {
+                        display: none;
+                        visibility: hidden;
+                        padding-right: 10px;
+                    }
+                    .select-styled {
+                        background-color: $White-Bg-1;
+                        color: $White-color;
+                        padding: 6px 40px 6px 16px;
+                        border-radius: 8px;
+                        border: 2px solid $Primary-color;
+                        font-size: $font-size-S;
+                        line-height: $line-height-S;
+                        font-family: $font-family-Poppins-Medium;
+                        &:after {
+                            content:"";
+                            width: 12px;
+                            height: 10px;
+                            position: absolute;
+                            background-image: url(/assets/img/arrow-drop-down.svg);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            top: 16px;
+                            right: 16px;
+                        }
+                        &:active, &.active {
+                            &:after {
+                                top: 16px;
+                                border-color: transparent transparent $White-color transparent;
+                            }
+                        }
+                    }
+                    .select-options {
+                        display: none; 
+                        position: absolute;
+                        top: 130%;
+                        right: 0;
+                        width: 200px;
+                        z-index: 999;
+                        background-color: $Primary-shade;
+                        border-radius: 12px;
+                        padding: 16px 0;
+                        box-shadow: none;
+                        @include breakpoint($secreen-xs){
+                            right: inherit;
+                            left: 0;
+                        }
+                        li {
+                            font-size: $font-size-S;
+                            line-height: $line-height-S;
+                            font-family: $font-family-Poppins-Medium;
+                            color: $White-color;
+                            border-radius: 12px;
+                            padding: 0 24px 0 24px;
+                            transition: .3s;
+                            &:not(:last-child){
+                                margin: 0 0 8px 0;
+                            }
+                            &:hover {
+                                color: $Primary-color;
+                                background: transparent;
+                                border-radius: 0;
+                            }
+                            &[rel="hide"] {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .row-creator{
+            .col-otr{
+                @include breakpoint($secreen-lg){
+                    width: 33.333%;
+                }
+                .col-inr{
+                    .col-box{
+                        display: flex;
+                        align-items: center;
+                        background-color: $White-Bg-1;
+                        border-radius: 16px;
+                        padding: 24px 28px;
+                        .avtar-otr{
+                            width: 62px;
+                            height: 62px;
+                            border-radius: 100px;
+                            position: relative;
+                            .avatar{
+                                height: 100%;
+                                border-radius: 100%;
+                                border: 2px solid $White-color;
+                            }
+                            .check-icon-otr{
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 100px;
+                                background-color: $Primary-color;
+                                border: 2px solid $White-color;
+                                position: absolute;
+                                display: flex;
+                                right: 2px;
+                                bottom: 0;
+                                @include breakpoint($secreen-xs){
+                                    width: 16px;
+                                    height: 16px;
+                                }
+                                .check-icon{
+                                    position: relative;
+                                    top: 40%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    color: $White-color;
+                                    font-size: 14px;
+                                    @include breakpoint($secreen-xs){
+                                        top: 30%;
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                        .content-otr{
+                            margin: 0 0 0 16px;
+                            .creator-name{
+                                color: $White-color;
+                            }
+                            .price{
+                                color: $Primary-color;
+                            }
+                        }
+                    }
+                }
+                .box-1,.box-2,.box-3,.box-4,.box-5,.box-6,.box-7,.box-8,.box-9,.box-10,.box-11,.box-12,.box-13,.box-14,.box-15,.box-16,.box-17,.box-18,.box-19,.box-20{
+                    margin: 0 0 24px 0;
+                }
+                .box-1,.box-2,.box-3,.box-4,.box-5,.box-6,.box-7,.box-8,.box-9,.box-10,.box-11,.box-12,.box-13,.box-14,.box-15,.box-16,.box-17,.box-18,.box-19,.box-20,.box-21,.box-22{
+                    @include breakpoint($secreen-max-md){
+                        margin: 0 0 24px 0;
+                    }
+                }
+                .box-1,.box-2,.box-3,.box-4,.box-5,.box-6,.box-7,.box-8,.box-9,.box-10,.box-11,.box-12,.box-13,.box-14,.box-15,.box-16,.box-17,.box-18,.box-19,.box-20,.box-21,.box-22,.box-23{
+                    @include breakpoint($secreen-xs){
+                        margin: 0 0 24px 0;
+                    }
+                }
+            }
+            .col-btn-otr{
+                .col-btn-inr{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 48px 0 0 0;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Explore Creator End Here
+-------------------------------------------*/

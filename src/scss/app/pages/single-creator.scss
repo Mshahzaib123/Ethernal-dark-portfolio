@@ -1,0 +1,565 @@
+
+
+/*------------------------------------------
+        Single Creator Start Here
+-------------------------------------------*/
+
+.single-creator-main{
+    margin: 128px 0;
+    overflow: hidden;
+    .container-fluid{
+        .row-custom-otr{
+            .col-creator-otr{
+                @include breakpoint($secreen-lg){
+                    width: 100%;
+                    margin: 0 0 72px 0;
+                }
+                @include breakpoint($secreen-max-md){
+                    margin: 0 0 72px 0;
+                }
+                .col-creator-inr{
+                    background-color: $White-Bg-1;
+                    border-radius: 24px;
+                    padding: 40px 30px 36px 30px;
+                    @include breakpoint($secreen-lg){
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        width: 100%;
+                        padding: 40px;
+                    }
+                    .img-otr{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .avatar{
+                            width: 90%;
+                            border-radius: 100%;
+                            @include breakpoint($secreen-lg){
+                                width: 80%;
+                            }
+                            @include breakpoint($secreen-max-md){
+                                width: 50%;
+                            }
+                            @include breakpoint($secreen-xxs){
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .information{
+                        @include breakpoint($secreen-lg){
+                            width: 50%;
+                        }
+                        .name{
+                            text-align: center;
+                            color: $White-color;
+                            margin: 16px 0;
+                        }
+                        .copy-icon-otr{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                            .text{
+                                color: $Shade-1;
+                                margin: 0 16px 0 0;
+                            }
+                            .copy-icon{
+                                font-size: 24px;
+                                color: $White-color;
+                            }
+                        }
+                        .action{
+                            text-align: center;
+                            margin: 30px 0 14px 0;
+                            .follow-btn{
+    
+                            }
+                        }
+                        .social-icon{
+                            .icon-ul{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                flex-wrap: wrap;
+                                .icon-li{
+                                    margin-top: 16px;
+                                    &:not(:last-child){
+                                        margin-right: 16px;
+                                    }
+                                    .icon-a{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        width: 52px;
+                                        height: 52px;
+                                        border-radius: 100%;
+                                        background-color: $White-Bg-1;
+                                        transition: .3s;
+                                        &:hover{
+                                            background-color: $Primary-color;
+                                        }
+                                        .icon{
+    
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .member{
+                            text-align: center;
+                            padding: 16px 0;
+                            border-top: 1px solid $Primary-color;
+                            border-bottom: 1px solid $Primary-color;
+                            color: $Shade-1;
+                            margin: 30px 0 0 0;
+                        }
+                    }
+                }
+            }
+            .col-art-otr{
+                @include breakpoint($secreen-lg){
+                    width: 100%;
+                }
+                .col-art-inr{
+                    .wrapper{
+                        margin: 0 0 72px 0;
+                        .tab-otr{
+                            display: flex;
+                            align-items: center;
+                            @include breakpoint($secreen-xxs){
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+                            .heading{
+                                color: $White-color;
+                                margin: 0 24px 0 0;
+                                @include breakpoint($secreen-xxs){
+                                    margin: 0 0 24px 0;
+                                }
+                            }
+                            .tab-inr{
+                                position: relative;
+                                .btn-drop{
+                                    display: flex;
+                                    align-items: center;
+                                    background-color: $White-Bg-1;
+                                    border: 2px solid $Primary-color;
+                                    border-radius: 12px;
+                                    padding: 6px 16px;
+                                    cursor: pointer;
+                                    .btn-drop-inr{
+                                        color: $White-color;
+                                    }
+                                    .arrow-down{
+                                        font-size: 18px;
+                                        color: $White-color;
+                                        margin: 0 0 0 8px;
+                                    }
+                                    .change-text{
+                                        color: $White-color;
+                                    }
+                                }
+                                .tabs-ul{
+                                    position: absolute;
+                                    left: 0;
+                                    top: 80px;
+                                    width: 200px;
+                                    border-radius: 24px;
+                                    background-color: $Primary-shade;
+                                    padding: 16px 24px 20px 24px;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    transition: .3s;
+                                    z-index: 10;
+                                    .tab-link{
+                                        cursor: pointer;
+                                        &:not(:last-child){
+                                            margin-bottom: 12px;
+                                        }
+                                        .tab-p{
+                                            color: $White-color;
+                                        }
+                                    }
+                                    .active{
+                                        .tab-p{
+                                            color: $Primary-color;
+                                        }
+                                    }
+                                }
+                                .tab-drop-open{
+                                    opacity: 1;
+                                    visibility: visible;
+                                    top: 50px;
+                                }
+                            }
+                        }
+                    }
+                    .row-custom-main{
+                        .tab-content{
+                            display: none;
+                            opacity: 0;
+                            animation: fadeIn 0.3s ease 1 forwards;
+                            .row-custom-inr{
+                                .col-otr{
+                                    @include breakpoint($secreen-max-xlg){
+                                        width: 33.333%;
+                                    }
+                                    @include breakpoint($secreen-max-md){
+                                        width: 50%;
+                                    }
+                                    @include breakpoint($secreen-custom){
+                                        width: 100%;
+                                    }
+                                    .col-inr{
+                                        background-color: $White-Bg-1;
+                                        border-radius: 24px;
+                                        padding: 28px 24px 32px 24px;
+                                        .avatar-main{
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-between;
+                                            margin: 0 0 24px 0;
+                                            .profile-inr{
+                                                display: flex;
+                                                .img-otr{
+                                                    position: relative;
+                                                    transition: .2s;
+                                                    .img-inr{
+                                                        .avatar-img{
+                                                            height: 40px;
+                                                            width: 40px;
+                                                            border-radius: 100%;
+                                                            border: 2px solid $White-color;
+                                                        }
+                                                    }
+                                                    .check-icon-otr{
+                                                        width: 16px;
+                                                        height: 16px;
+                                                        border-radius: 100px;
+                                                        background-color: $Primary-color;
+                                                        border: 1px solid $White-color;
+                                                        position: absolute;
+                                                        display: flex;
+                                                        right: 0;
+                                                        bottom: 0;
+                                                        .check-icon{
+                                                            position: relative;
+                                                            top: 35%;
+                                                            left: 50%;
+                                                            transform: translate(-50%, -50%);
+                                                            color: $White-color;
+                                                            font-size: 12px;
+                                                        }
+                                                    }
+                                                }
+                                                .img-1,.img-2,.img-3{
+                                                    &:hover{
+                                                        z-index: 1;
+                                                        transform: translateY(-3px);
+                                                        .hover{
+                                                            opacity: 1;
+                                                            visibility: visible;
+                                                        }
+                                                    }
+                                                    .hover{
+                                                        position: absolute;
+                                                        text-align: center;
+                                                        width: 260px;
+                                                        background-color: $Primary-shade;
+                                                        border: 1px solid $Primary-color;
+                                                        border-radius: 8px;
+                                                        left: 0;
+                                                        top: -60px;
+                                                        transition: .3s;
+                                                        opacity: 0;
+                                                        visibility: hidden;
+                                                        @include breakpoint($secreen-max-md){
+                                                            display: none;
+                                                        }
+                                                        .text{
+                                                            color: $White-color;
+                                                            padding: 6px 16px;
+                                                        }
+                                                    }
+                                                }
+                                                .img-2{
+                                                    margin-left: -20px;
+                                                }
+                                                .img-3{
+                                                    margin-left: -20px;
+                                                }
+                                            }
+                                            .list-icon-otr{
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: flex-end;
+                                                cursor: pointer;
+                                                width: 20px;
+                                                .icon{
+                                                    width: auto;
+                                                }
+                                            }
+                                        }
+                                        .cover-img-otr{
+                                            position: relative;
+                                            .cover-img{
+                                                width: 100%;
+                                                border-radius: 16px;
+                                            }
+                                            .time-otr{
+                                                position: absolute;
+                                                left: 0;
+                                                bottom: 0;
+                                                background-color: $White-bg-2;
+                                                z-index: 10;
+                                                border-radius: 14px;
+                                                width: 124px;
+                                                height: 40px;
+                                                backdrop-filter: blur(25px);
+                                                .timer{
+                                                    position: absolute;
+                                                    left: 65%;
+                                                    top: 50%;
+                                                    transform: translate(-50%, -50%);
+                                                    width: 100%;
+                                                    color: $White-color;
+                                                }
+                                            }
+                                            .heart-icon-otr2{
+                                                position: absolute;
+                                                width: 52px;
+                                                height: 52px;
+                                                border-radius: 100%;
+                                                display: flex;
+                                                background-color: $White-bg-2;
+                                                cursor: pointer;
+                                                top: 24px;
+                                                right: 24px;
+                                                backdrop-filter: blur(25px);
+                                                .heart-icon2{
+                                                    position: absolute;
+                                                    left: 50%;
+                                                    top: 50%;
+                                                    transform: translate(-50%, -50%);
+                                                    font-size: 24px;
+                                                    color: $White-color;
+                                                }
+                                                .ri-heart-fill{
+                                                    color: red;
+                                                }
+                                            }
+                                        }
+                                        .art-name{
+                                            display: inline-flex;
+                                            color: $White-color;
+                                            margin: 18px 0;
+                                            transition: .3s;
+                                            &:hover{
+                                                color: $Primary-color;
+                                            }
+                                        }
+                                        .bid-main{
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-between;
+                                            background-color: $White-Bg-1;
+                                            padding: 16px 20px;
+                                            border-radius: 8px;
+                                            .bid{
+                                                color: $Shade-1;
+                                            }
+                                            .Price{
+                                                color: $White-color;
+                                            }
+                                        }
+                                    }
+                                    .box-1,.box-2,.box-3{
+                                        margin: 0 0 24px 0;
+                                    }
+                                    .box-1,.box-2,.box-3,.box-4{
+                                        @include breakpoint($secreen-max-md){
+                                            margin: 0 0 24px 0;
+                                        }
+                                    }
+                                    .box-1,.box-2,.box-3,.box-4,.box-5{
+                                        @include breakpoint($secreen-custom){
+                                            margin: 0 0 24px 0;
+                                        }
+                                    }
+                                }
+                            }
+                            .row-custom-inr2{
+                                .col-following-otr{
+                                    @include breakpoint($secreen-max-md){
+                                        overflow-x: scroll;
+                                    }
+                                    &::-webkit-scrollbar {
+                                        width: 100%;
+                                        height: .1px;
+                                        background-color: #EEEEEE;
+                                    }
+                                    &::-webkit-scrollbar-thumb {
+                                        background-color: #ACACAC;
+                                        border-radius: 0;
+                                    }
+                                    &:not(:last-child){
+                                        margin: 0 0 24px 0;
+                                    }
+                                    .col-following-inr{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        background-color: $White-Bg-1;
+                                        border-radius: 24px;
+                                        padding: 28px 32px;
+                                        @include breakpoint($secreen-max-md){
+                                            width: 992px;
+                                        }
+                                        .img-otr{
+                                            display: flex;
+                                            align-items: center;
+                                            .img-inr{
+                                                margin: 0 24px 0 0;
+                                                .avatar{
+                                                    width: 105px;
+                                                    border-radius: 100%;
+                                                }
+                                            }
+                                            .content{
+                                                .name{
+                                                    color: $White-color;
+                                                }
+                                                .follow-text{
+                                                    color: $Shade-1;
+                                                    margin: 4px 0 8px 0;
+                                                }
+                                                .action{
+                                                    display: flex;
+                                                    .btn-unfolow{
+                                                        padding: 6px 16px 6px 16px;
+                                                        border-radius: 12px;
+                                                        background-color: $White-Bg-1;
+                                                        border: 1px solid $Primary-color;
+                                                        color: $White-color;
+                                                        transition: .2s;
+                                                        &:hover{
+                                                            background-color: $Primary-color;
+                                                            color: $White-color;
+                                                            border: 1px solid transparent;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .art-img-otr{
+                                            display: flex;
+                                            align-items: center;
+                                            .art-img-inr{
+                                                &:not(:last-child){
+                                                    margin: 0 16px 0 0;
+                                                }
+                                                .art-img{
+                                                    width: 120px;
+                                                    border-radius: 16px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .row-custom-inr3{
+                                .col-following-otr{
+                                    @include breakpoint($secreen-max-md){
+                                        overflow-x: scroll;
+                                    }
+                                    &::-webkit-scrollbar {
+                                        width: 100%;
+                                        height: .1px;
+                                        background-color: #EEEEEE;
+                                    }
+                                    &::-webkit-scrollbar-thumb {
+                                        background-color: #ACACAC;
+                                        border-radius: 0;
+                                    }
+                                    &:not(:last-child){
+                                        margin: 0 0 24px 0;
+                                    }
+                                    .col-following-inr{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        background-color: $White-Bg-1;
+                                        border-radius: 24px;
+                                        padding: 28px 32px;
+                                        @include breakpoint($secreen-max-md){
+                                            width: 992px;
+                                        }
+                                        .img-otr{
+                                            display: flex;
+                                            align-items: center;
+                                            .img-inr{
+                                                margin: 0 24px 0 0;
+                                                .avatar{
+                                                    width: 105px;
+                                                    border-radius: 100%;
+                                                }
+                                            }
+                                            .content{
+                                                .name{
+                                                    color: $White-color;
+                                                }
+                                                .follow-text{
+                                                    color: $Shade-1;
+                                                    margin: 4px 0 8px 0;
+                                                }
+                                                .action{
+                                                    display: flex;
+                                                    .btn-unfolow{
+                                                        padding: 6px 16px 6px 16px;
+                                                        border-radius: 12px;
+                                                        background-color: $Primary-color;
+                                                        color: $White-color;
+                                                        border: 1px solid transparent;
+                                                        transition: .2s;
+                                                        &:hover{
+                                                            background-color: $White-Bg-1;
+                                                            border: 1px solid $Primary-color;
+                                                            color: $White-color;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .art-img-otr{
+                                            display: flex;
+                                            align-items: center;
+                                            .art-img-inr{
+                                                &:not(:last-child){
+                                                    margin: 0 16px 0 0;
+                                                }
+                                                .art-img{
+                                                    width: 120px;
+                                                    border-radius: 16px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .active{
+                            display: block;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Single Creator End Here
+-------------------------------------------*/

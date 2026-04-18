@@ -1,0 +1,74 @@
+
+
+/*------------------------------------------
+            Blog Start Here
+-------------------------------------------*/
+
+.blog-main-inr{
+    margin: 128px 0;
+    .container-fluid{
+        .row-custom{
+            .col-otr{
+                @include breakpoint($secreen-lg){
+                    width: 50%;
+                }
+                .col-inr{
+                    background-color: $White-Bg-1;
+                    backdrop-filter: blur(25px);
+                    border-radius: 24px;
+                    padding: 36px 36px 32px 36px;
+                    @include breakpoint($secreen-xs){
+                        padding: 28px 28px 24px 28px;
+                    }
+                    .img-otr{
+                        .blog-img{
+                            width: 100%;
+                            border-radius: 16px;
+                        }
+                    }
+                    .content-otr{
+                        .date-otr{
+                            color: $Primary-color;
+                            margin: 16px 0 8px 0;
+                            .date-inr{
+                                color: $Shade-2;
+                            }
+                        }
+                        .heading{
+                            display: inline;
+                            color: $White-color;
+                            transition: .3s;
+                            &:hover{
+                                color: $Primary-color;
+                            }
+                        }
+                        .desc{
+                            color: $Shade-1;
+                            margin: 8px 0 0 0;
+                        }
+                    }
+                }
+                .box-1,.box-2,.box-3,.box-4,.box-5,.box-6,.box-7,.box-8,.box-9{
+                    margin: 0 0 24px 0;
+                }
+                .box-1,.box-2,.box-3,.box-4,.box-5,.box-6,.box-7,.box-8,.box-9,.box-10,.box-11{
+                    @include breakpoint($secreen-max-sm){
+                        margin: 0 0 24px 0;
+                    }
+                }
+            }
+            .col-btn-otr{
+                .col-btn-inr{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 48px 0 0 0;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+            Blog End Here
+-------------------------------------------*/

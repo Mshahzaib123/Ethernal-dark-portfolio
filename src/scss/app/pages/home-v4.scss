@@ -1,0 +1,89 @@
+
+
+/*------------------------------------------
+        Hero home2 Start Here
+-------------------------------------------*/
+
+.hero4-main{
+    .container-fluid{
+        .row-custom{
+            position: relative;
+            width: 100%;
+            margin: 0;
+            background-image: url(/assets/img/hero-bg-img2.png);
+            padding:128px 15px;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 24px;
+            @include breakpoint($secreen-sm){
+                position: center;
+            }
+            .col-content-otr{
+                .col-content-inr{
+                    text-align: center;
+                    .tag{
+                        color: $Shade-1;
+                        margin-bottom: 12px;
+                    }
+                    .heading{
+                        color: $White-color;
+                        @include breakpoint($secreen-max-sm){
+                            br{
+                                display: none;
+                            }
+                        }
+                        @include breakpoint($secreen-xs){
+                            font-size: 36px;
+                            line-height: 60px;
+                        }
+                    }
+                    .desc{
+                        color: $Shade-1;
+                        margin: 20px 0 40px 0;
+                        @include breakpoint($secreen-xs){
+                            font-size: $font-size-S;
+                            line-height: $line-height-S;
+                        }
+                    }
+                    .action{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        @include breakpoint($secreen-xxs){
+                            flex-direction: column;
+                            text-align: center;
+                        }
+                        .btn-hero{
+                            @include breakpoint($secreen-xxs){
+                                width: 100%;
+                            }
+                            &:not(:last-child){
+                                margin: 0 24px 0 0;
+                                @include breakpoint($secreen-xxs){
+                                    margin: 0 0 24px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .lines{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                z-index: -1;
+                @include breakpoint($secreen-max-xl){
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Hero home2 End Here
+-------------------------------------------*/

@@ -1,0 +1,175 @@
+
+
+/*------------------------------------------
+        Blog Details Start Here
+-------------------------------------------*/
+
+.blog-detail-main{
+    margin: 128px 0;
+    .container-fluid{
+        .wrapper{
+            margin: 0 0 72px 0;
+            .heading{
+                color: $White-color;
+            }
+        }
+        .row-custom{
+            .col-detail-otr{
+                .col-detail-inr{
+                    background-color: $White-Bg-1;
+                    border-radius: 24px;
+                    padding: 48px 48px 36px 48px;
+                    @include breakpoint($secreen-max-md){
+                        padding: 28px 28px 24px 28px;
+                    }
+                    .img-otr{
+                        margin: 0 0 36px 0;
+                        .art-img{
+                            width: 100%;
+                            border-radius: 24px;
+                            @include breakpoint($secreen-max-md){
+                                border-radius: 16px;
+                            }
+                        }
+                    }
+                    .head-1,.head-2{
+                        color: $White-color;
+                        margin-bottom: 16px;
+                    }
+                    .desc{
+                        color: $Shade-1;
+                        margin-bottom: 20px;
+                    }
+                    .desc-1{
+                        margin-bottom: 16px;
+                    }
+                    .desc-2,.desc-7{
+                        margin-bottom: 24px;
+                    }
+                    .desc-6{
+                        margin-bottom: 0;
+                    }
+                    .content-otr{
+                        background-color: $White-Bg-1;
+                        border-radius: 16px;
+                        padding: 24px 28px;
+                        margin: 36px 0;
+                        .desc-inr{
+                            color: $Shade-1;
+                        }
+                    }
+                    .desc-8{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .col-sidebar-otr{
+                .col-sidebar-inr{
+                    padding-left: 72px;
+                    @include breakpoint($secreen-max-xlg){
+                        padding-left: 48px;
+                    }
+                    @include breakpoint($secreen-max-xl){
+                        padding-left: 0;
+                    }
+                    @include breakpoint($secreen-max-md){
+                        padding-top: 32px;
+                    }
+                    .category-otr{
+                        background-color: $White-Bg-1;
+                        border-radius: 16px;
+                        padding: 20px 28px 32px 28px;
+                        .heading{
+                            color: $White-color;
+                            margin-bottom: 24px;
+                        }
+                        .caretory-ul{
+                            .caretory-li{
+                                &:not(:last-child){
+                                    margin: 0 0 16px 0;
+                                }
+                                .caretory-a{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    padding-bottom: 16px;
+                                    border-bottom: 1px solid $Primary-color;
+                                    &:hover{
+                                        .name{
+                                            color: $Primary-color;
+                                        }
+                                    }
+                                    .name{
+                                        color: $Shade-1;
+                                        transition: .3s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .tabs-otr{
+                        background-color: $White-Bg-1;
+                        border-radius: 16px;
+                        padding: 20px 28px 32px 28px;
+                        margin: 32px 0;
+                        .heading{
+                            color: $White-color;
+                            margin-bottom: 8px;
+                        }
+                        .tabs{
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            .tabs-btn{
+                                margin-top: 16px;
+                                &:not(:last-child){
+                                    margin-right: 16px;
+                                }
+                            }
+                        }
+                    }
+                    .share-otr{
+                        background-color: $White-Bg-1;
+                        border-radius: 16px;
+                        padding: 20px 28px 32px 28px;
+                        .heading{
+                            color: $White-color;
+                            margin-bottom: 8px;
+                        }
+                        .icon-ul{
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            .icon-li{
+                                margin-top: 16;
+                                &:not(:last-child){
+                                    margin-right: 16px;
+                                }
+                                .icon-a{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 52px;
+                                    height: 52px;
+                                    border-radius: 100%;
+                                    background-color: $White-Bg-1;
+                                    transition: .3s;
+                                    &:hover{
+                                        background-color: $Primary-color;
+                                    }
+                                    .icon{
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Blog Details End Here
+-------------------------------------------*/

@@ -1,0 +1,80 @@
+
+
+/*------------------------------------------
+            About Start Here
+-------------------------------------------*/
+
+.about-main{
+    margin: 128px 0;
+    .container-fluid{
+        .call-to-action{
+            display: flex;
+            position: relative;
+            padding: 96px 72px 104px 72px;
+            background-color: $White-Bg-1;
+            border-radius: 24px;
+            overflow: hidden;
+            @include breakpoint($secreen-xs){
+                padding: 48px 28px 56px 28px;
+            }
+            .wrapper{
+                position: relative;
+                z-index: 10;
+                .heading{
+                    color: $White-color;
+                    margin-bottom: 16px;
+                    @include breakpoint($secreen-max-sm){
+                        br{
+                            display: none;
+                        }
+                    }
+                }
+                .desc{
+                    color: $Shade-1;
+                    @include breakpoint($secreen-max-sm){
+                        br{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .img-otr{
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: -200px;
+                right: -260px;
+                z-index: 2;
+                transform: rotate(-24deg);
+                @include breakpoint($secreen-max-xxlg){
+                    top: -30px;
+                    right: -170px;
+                }
+                @include breakpoint($secreen-max-md){
+                    display: none;
+                }
+                .img-inr{
+                    &:not(:last-child){
+                        margin: 0 30px 0 0;
+                    }
+                    .col-img-inr{
+                        &:not(:last-child){
+                            margin-bottom: 30px;
+                        }
+                        .about-img{
+                            width: 250px;
+                            border-radius: 16px;
+                            @include breakpoint($secreen-max-xxlg){
+                                width: 200px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+            About End Here
+-------------------------------------------*/

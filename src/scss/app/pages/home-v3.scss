@@ -1,0 +1,138 @@
+
+
+/*------------------------------------------
+        Hero Section Start Here
+-------------------------------------------*/
+
+.hero3-main{
+    .container-fluid{
+        .row-custom{
+            background-color: $White-Bg-1;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 24px;
+            .col-carousel-otr{
+                height: 100vh;
+                padding: 0;
+                @include breakpoint($secreen-max-md){
+                    height: 70vh;
+                }
+                @include breakpoint($secreen-xxs){
+                    height: 50vh;
+                }
+                .col-carousel-inr{
+                    height: 100%;
+                    overflow: hidden;
+                    .row-cover-img{
+                        height: 100%;
+                        .col-img-otr{
+                            height: 100%;
+                            .img-cover{
+                                height: 100vh;
+                                width: 100%;
+                                object-fit: cover;
+                                @include breakpoint($secreen-max-md){
+                                    height: 70vh;
+                                }
+                                @include breakpoint($secreen-xxs){
+                                    height: 50vh;
+                                }
+                            }
+                        }
+                        .owl-dots{
+                            position: relative;
+                            z-index: 10;
+                            top: -66px;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            .col-content-otr{
+                .col-content-inr{
+                    position: relative;
+                    padding: 0 72px;
+                    @include breakpoint($secreen-lg){
+                        padding: 0 15px 0 18px;
+                    }
+                    @include breakpoint($secreen-max-md){
+                        padding: 96px 72px 128px 72px;
+                    }
+                    @include breakpoint($secreen-max-md){
+                        padding: 72px 15px 72px 15px;
+                    }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 400px;
+                        height: 400px;
+                        border-radius: 100%;
+                        background-color: $White-color;
+                        filter: blur(240px);
+                        top: 50%;
+                        left: -200px;
+                        transform: translateY(-50%);
+                        opacity: .4;
+                        @include breakpoint($secreen-max-md){
+                            display: none;
+                        }
+                    }
+                    .tag{
+                        color: $Shade-1;
+                        margin-bottom: 12px;
+                    }
+                    .heading{
+                        color: $White-color;
+                        @include breakpoint($secreen-lg){
+                            font-size: 52px;
+                            line-height: 80px;
+                        }
+                        @include breakpoint($secreen-xs){
+                            font-size: 36px;
+                            line-height: 60px;
+                        }
+                    }
+                    .desc{
+                        color: $Shade-1;
+                        margin: 20px 0 40px 0;
+                        @include breakpoint($secreen-max-lg){
+                            br{
+                                display: none;
+                            }
+                        }
+                        @include breakpoint($secreen-xs){
+                            font-size: $font-size-S;
+                            line-height: $line-height-S;
+                        }
+                    }
+                    .action{
+                        display: flex;
+                        align-items: center;
+                        @include breakpoint($secreen-xxs){
+                            flex-direction: column;
+                            text-align: center;
+                        }
+                        .btn-hero{
+                            @include breakpoint($secreen-xxs){
+                                width: 100%;
+                            }
+                            &:not(:last-child){
+                                margin: 0 24px 0 0;
+                                @include breakpoint($secreen-xxs){
+                                    margin: 0 0 24px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Hero Section End Here
+-------------------------------------------*/
